@@ -1390,5 +1390,27 @@ namespace LibUISharp.Internal
         private delegate IntPtr uiNewGrid_t();
         public static IntPtr uiNewGrid() => FunctionLoader.Load<uiNewGrid_t>("uiNewGrid")();
         #endregion
+
+        #region uiFixed (FixedPanel)
+        [UnmanagedFunctionPointer(Convention)]
+        private delegate void uiFixedAppend_t(IntPtr g, IntPtr c, int x, int y);
+        public static void uiFixedAppend(IntPtr g, IntPtr c, int x, int y) => FunctionLoader.Load<uiFixedAppend_t>("uiFixedAppend")(g, c, x, y);
+
+        [UnmanagedFunctionPointer(Convention)]
+        private delegate void uiFixedMove_t(IntPtr g, IntPtr c, int x, int y);
+        public static void uiFixedMove(IntPtr g, IntPtr c, int x, int y) => FunctionLoader.Load<uiFixedMove_t>("uiFixedMove")(g, c, x, y);
+
+        [UnmanagedFunctionPointer(Convention)]
+        private delegate void uiFixedSize_t(IntPtr g, IntPtr c, int width, int height);
+        public static void uiFixedSize(IntPtr g, IntPtr c, int width, int height) => FunctionLoader.Load<uiFixedSize_t>("uiFixedSize")(g, c, width, height);
+
+        [UnmanagedFunctionPointer(Convention)]
+        private delegate void uiFixedSetSize_t(IntPtr g, IntPtr c, int width, int height);
+        public static void uiFixedSetSize(IntPtr g, IntPtr c, int width, int height) => FunctionLoader.Load<uiFixedSetSize_t>("uiFixedSetSize")(g, c, width, height);
+
+        [UnmanagedFunctionPointer(Convention)]
+        private delegate IntPtr uiNewFixed_t();
+        public static IntPtr uiNewFixed() => FunctionLoader.Load<uiNewFixed_t>("uiNewFixed")();
+        #endregion
     }
 }
