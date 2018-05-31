@@ -27,8 +27,7 @@ namespace LibUISharp.Drawing
 
         public static Matrix SetIdentity()
         {
-            Matrix matrix = new Matrix();
-            LibuiLibrary.uiDrawMatrixSetIdentity(matrix.ToLibuiDrawMatrix());
+            Matrix matrix = new Matrix(1, 0, 0, 1, 0, 0);
             return matrix;
         }
         
